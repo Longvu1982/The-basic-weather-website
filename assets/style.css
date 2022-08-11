@@ -1,0 +1,209 @@
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    position: relative;
+}
+.app-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 1;
+}
+.main-section {
+    flex: 1.6;
+    /* background-color: aqua; */
+    /* opacity: 0.6; */
+    position: relative;
+}
+.main-section-detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    padding: 110px 160px;
+    justify-content: start;
+    align-items: flex-end;
+    text-shadow: 0px 0px 1.5px rgba(0,0,0,0.3);
+    letter-spacing: -0.05em;
+}
+.main-section-detail .temp {
+
+    color: white;
+    font-size: 160px;
+    font-weight: 500;
+    vertical-align: bottom;
+    display: table-cell;
+    margin-right: 60px;
+    height: 160px;
+}
+
+.main-section-detail .temp span {
+
+    font-weight: 600;
+}
+
+.main-section-detail .country {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.main-section-detail .country .country-name {
+    font-size: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+.main-section-detail .country .country-time {
+    font-weight: 300;
+    text-align: center;
+} 
+.main-section-detail .weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-section-detail .weather img {
+    width: 50px;
+    margin-bottom: 10px;
+    -webkit-filter: drop-shadow(2px 4px 3px rgba(0,0,0,0.3));
+    filter: drop-shadow(2px 4px 3px rgba(0,0,0,0.3));
+}
+.detail-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.detail-section .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #1b3e57;
+    opacity: 0.8;
+}
+.detail-section .content {
+    position: absolute;
+    inset: 0;
+    padding:  50px 80px;
+}
+.detail-section .search-section {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 40px;
+}
+.detail-section .search-icon  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 120px;
+    height: 110px;
+    background-color: #aacde1;
+    color: #1b3e57;
+    font-size: 25px;
+    font-weight: 600;
+}
+.detail-section .search-icon:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.detail-section .recom-list {
+    font-size: 25px;
+    font-weight: 300;
+    color: #ccc;
+}
+.detail-section .recom-list >* {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+.detail-section .recom-list >*:hover {
+    cursor: pointer;
+}
+.detail-section input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+    font-size: 25px;
+    color: #ccc;
+    margin-bottom: 60px;
+    outline: none;
+    font-weight: 100;
+}
+.detail-section input:active {
+    outline: none;
+}
+.detail-section input::placeholder {
+    color: #aaa;
+    font-weight: 100;
+    opacity: 0.2;
+}
+.detail-section .dsc-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+.detail-section .dsc-section .title {
+    margin-bottom: 60px;
+    font-size: 25px;
+}
+.detail-section .dsc-section .dsc-item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+   opacity: 0.8;
+   align-items: center;
+}
+
+.detail-section .dsc-section .dsc-item p {
+    font-size: 25px;
+    color: #ccc;
+    font-weight: 300;
+}
+.detail-section .dsc-section .dsc-item img {
+    width: 25px;
+}
+.detail-section .dsc-section .dsc-item p:nth-child(2) {
+    flex: 1;
+    margin-left: 15px;
+}
+.detail-section .dsc-section .dsc-item p:nth-child(3) {
+    color: #eee;
+    font-weight: 500;
+}
+.main-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 0;
+    overflow: hidden;
+    filter: brightness(0.9);
+    -webkit-filter: brightness(0.9);
+
+}
+.main-background img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+
+}
